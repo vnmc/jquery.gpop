@@ -1,0 +1,288 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="jquery.imagegallery.css"></link>
+    <script src="jquery.js"></script>
+    <script src="jquery.imagegallery.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <script>
+    $(window).load(function() {
+  
+        $('.gallery').imagegallery(
+            {
+                centered: true            
+                
+             /*metadata: {
+                renderHtml: function($img){
+            
+                    return "<h3>" + $img.data('title') + "</h3>"
+                    + "<p>" + $img.data('description') + "</p>"
+                    + "<a href=''>" + $img.data('link') + "</a>";
+                }
+            }*/
+        });
+    });
+    </script>
+  
+</head>
+<body>
+
+<div class="gi-wrapper">
+
+   <h1>GI Gallery</h1> 
+   <hr>
+   <br>
+
+ <div class="pluginHeading">
+   <h2>No content</h2> 
+   <p>The most simple form of the image gallery</p>
+ </div>
+
+
+<!-- Gallery without content -->
+<div class="gi-gallery" id="demo1">
+    <ul>
+        <li><a href="#"><img src="placer.jpg"></a></li>
+        <li><a href="#"><img src="placer.jpg"></a></li>
+        <li><a href="#"><img src="placer.jpg"></a></li>
+    </ul> 
+</div>
+<!-- /Gallery without content -->
+
+<!-- Gallery with content -->
+ <div class="pluginHeading">
+   <h2>With content</h2> 
+   <p>Anything added to the "div" will render on hover</p>
+ </div>
+ 
+    <div class="gi-gallery" id="demo2">   
+    <ul>       
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+            <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+            <div>
+                <h4>Thumbnail label</h4>
+                <p>Thumbnail caption...</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>    
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>        
+
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+    </ul>
+    </div>
+
+<!-- /Gallery with content -->
+
+<div class="pluginHeading">
+   <h2>Flexible Grid</h2> 
+   <p>A simple flexible customizable grid</p>
+ </div>
+
+<!-- Gallery Flexible Grid demo -->
+<!-- 3 image grid demo -->
+<div class="gi-gallery" id="demo1">
+    <ul>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+    </ul>
+</div>
+<!-- /3 image grid demo -->
+
+<!-- 4 image grid demo -->
+<div class="gi-gallery" id="demo2">
+    <ul>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+    </ul>
+</div>
+<!-- /4 image grid demo -->
+
+<!-- 5 image grid demo -->
+<div class="gi-gallery" id="demo3">
+    <ul>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+    </ul>
+</div>
+<!-- /5 image grid demo -->
+
+<!-- 6 image grid demo -->
+<div class="gi-gallery" id="demo4">
+    <ul>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+        <li>
+            <a href="#"><img src="placer.jpg"/></a>
+        <div>
+            <h4>Thumbnail label</h4>
+            <p>Thumbnail caption...</p>
+        </div>
+        </li>
+    </ul>
+</div>
+<!-- /6 image grid demo-->
+<!-- /Gallery Flexible Grid demo -->
+
+</div> <!-- /wapper -->
+
+<footer></footer>
+
+</body>
+</html>
