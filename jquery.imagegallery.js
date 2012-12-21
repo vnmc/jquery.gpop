@@ -19,13 +19,32 @@
                     else{
                         return '';
                     }
-                }
+
+                },
+                showHover: function($image){
+                    $root
+                        .removeClass('gi-clonedImageInvisible')
+                        .addClass('gi-clonedImageVisible')
+                        .css('left', $image.data('offsetL'))
+                        .css('top', $image.data('offsetT'))
+                        .css('max-width', $image.data('w1'))
+                        .find('img').attr('src', $image.attr('src'))
+                        .css('width', $image.data('w1'))
+                        .css('height', $image.data('h1'));
+
+                    if($image.parent().is('a')){
+                        $link.attr('href', $image.parent().attr('href'));
+                    }
+                    $text.html(options.renderDescription($image));
+                },
+                delay: 0
             }, 
             myOptions);
     
         
         var $wrapper = this, $clone = null, $root = null, $text = null, $link = null;
         var resizeTimer = null;
+        var delayTimer = null;
 
         
         function create(){
@@ -33,10 +52,14 @@
             $link = $('<a/>').appendTo($root);
             $clone = $('<img/>').appendTo($link);
             $text = $('<div/>').appendTo($root);
-            $root.addClass('clonedImageInvisible').addClass('clonedImage').prependTo($wrapper);
+            $root.addClass('gi-clonedImageInvisible').addClass('gi-clonedImage').prependTo($wrapper);
         }
         
         function init(){
+
+            var refPos = $wrapper.find('ul').position();
+            
+
             $wrapper.find('li img').each(function(index, item){
                 var w0 = $(this).width();
                 var w1 = w0 * options.scale;
@@ -44,17 +67,29 @@
                 var h1 = h0 * options.scale;
                 var offsetL = $(this).position().left;
                 var offsetT = $(this).position().top;
-
+                
                 if(options.centered){
                     offsetL -= (w1-w0) / 2;
                     offsetT -= (h1-h0) / 2;
                 }
+                
+                
+                if(offsetL < refPos.left){
+                    offsetL = refPos.left;
+                }
+                
+                if(offsetT < refPos.top){
+                    offsetT = refPos.top;
+                }   
+
+                           
+
+
+                
 
                 if(options.limitedToWrapper){
                     
                 }
-                
-                
                 $(this)
                     .data('h0', h0)
                     .data('h1', h1)
@@ -62,29 +97,22 @@
                     .data('w1', w1)
                     .data('offsetL', offsetL)
                     .data('offsetT',  offsetT);
+                    
             });
             
             
             $root.on('mouseleave.imagegallery', function(event){
-                $root.removeClass('clonedImageVisible').addClass('clonedImageInvisible');
+                $root.removeClass('gi-clonedImageVisible').addClass('gi-clonedImageInvisible');
             }); 
                         
-            $(document).on('mouseenter.imagegallery', '.gallery ul li a img', function(event){
-                var $img = $(event.currentTarget);
-                $root
-                    .removeClass('clonedImageInvisible')
-                    .addClass('clonedImageVisible')
-                    .css('left', $img.data('offsetL'))
-                    .css('top', $img.data('offsetT'))
-                    .css('max-width', $img.data('w1'))
-                    .find('img').attr('src', $img.attr('src'))
-                    .css('width', $img.data('w1'))
-                    .css('height', $img.data('h1'));
-
-                if($img.parent().is('a')){
-                    $link.attr('href', $img.parent().attr('href'));
+            $(document).on('mouseenter.imagegallery', '.gi-gallery ul li a img', function(event){
+                if(delayTimer != null){
+                    window.clearTimeout(delayTimer);
                 }
-                $text.html(options.renderDescription($img));
+                delayTimer = window.setTimeout(function(){
+                    var $img = $(event.currentTarget);
+                    options.showHover($img);
+                }, options.delay);
             });
             
             $(window).on('resize.imagegallery', function(event){
