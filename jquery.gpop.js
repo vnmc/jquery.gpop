@@ -5,7 +5,7 @@
 //	=================================================================
 
 (function($){
-    $.fn.imagegallery = function(myOptions){
+    $.fn.gpop = function(myOptions){
         var options = $.extend(
             {
                 scale:              1.3,
@@ -101,11 +101,11 @@
             });
             
             
-            $root.on('mouseleave.imagegallery', function(event){
+            $root.on('mouseleave.gpop', function(event){
                 $root.removeClass('gi-clonedImageVisible').addClass('gi-clonedImageInvisible');
             }); 
                         
-            $(document).on('mouseenter.imagegallery', '.gi-gallery ul li a img', function(event){
+            $(document).on('mouseenter.gpop', '.gi-gallery ul li a img', function(event){
                 if(delayTimer != null){
                     window.clearTimeout(delayTimer);
                 }
@@ -115,7 +115,7 @@
                 }, options.delay);
             });
             
-            $(window).on('resize.imagegallery', function(event){
+            $(window).on('resize.gpop', function(event){
                 if(resizeTimer != null){
                     window.clearTimeout(resizeTimer);
                 }
