@@ -1,25 +1,15 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="jquery.imagegallery.css"></link>
-    <script src="http://code.jquery.com/jquery-latest.min.js"
+    <link rel="stylesheet" type="text/css" href="jquery.gpop.css"></link>
+        <script src="http://code.jquery.com/jquery-latest.min.js"
         type="text/javascript"></script>
-    <script src="jquery.imagegallery.js"></script>
+    <script src="jquery.gpop.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <script>
     $(window).load(function() {
   
-        $('.gi-gallery').imagegallery(
-            {
-                centered: true            
-                
-             /*metadata: {
-                renderHtml: function($img){
-            
-                    return "<h3>" + $img.data('title') + "</h3>"
-                    + "<p>" + $img.data('description') + "</p>"
-                    + "<a href=''>" + $img.data('link') + "</a>";
-                }
-            }*/
+        $('.gi-gallery').each(function(){
+            $(this).gpop();
         });
     });
     </script>
@@ -29,7 +19,7 @@
 
 <div class="gi-wrapper">
 
-   <h1>GI Gallery</h1> 
+   <h1>jQuery.gpop Demo</h1> 
    <hr>
    <br>
 
