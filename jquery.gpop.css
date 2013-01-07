@@ -123,7 +123,7 @@ box-shadow: 1px 1px 10px 5px rgba(115,115,115,0.06);
 
 /* Media Queries Css
 ––––––––––––––––––––––––––––––––––––––––––––––––*/
-
+/* phone */
 @media (max-width: 480px) {
 
 .gPopDemoWapper {
@@ -135,7 +135,7 @@ box-shadow: 1px 1px 10px 5px rgba(115,115,115,0.06);
 #demo1 ul li {
   width: 100%;
 }
-#demo2 ul li {
+#demo2 ul li{
   width: 100%;
 }
 #demo3 ul li {
