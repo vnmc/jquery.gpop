@@ -1,3 +1,5 @@
+/* Demo Page Css 
+––––––––––––––––––––––––––––––––––––––––––––––––*/
 * {
   margin: 0;
   padding: 0;
@@ -29,15 +31,23 @@ p {
   font-weight: 100;
 }
 a {
+  color: #333;
   font-size: 0.75em;
   margin: 0.4em 0;
   font-weight: 100;
+  text-decoration: none;
+}
+footer {
+  height: 3em;
 }
 .pluginHeading {
   margin-bottom: 2em;
   border-left: 3px solid #8B8970;
   padding-left: 1.2em;
 }
+
+/* Grid 
+––––––––––––––––––––––––––––––––––––––––––––––––*/
 #demo1 ul li {
   width: 32.33%;
 }
@@ -56,24 +66,25 @@ a {
 #demo6 ul li {
   width: 15.666666%;
 }
-footer {
-  height: 3em;
-}
-.gi-wrapper {
+/* Wapper */
+.gPopDemoWapper {
   margin: 0 auto;
   max-width: 730px;
   overflow: hidden;
 }
-.gi-wrapper .gi-gallery {
+
+/* Plugin Css
+––––––––––––––––––––––––––––––––––––––––––––––––*/
+.gPop-gallery {
   display: block;
   margin-left: 1%;
 }
-.gi-wrapper .gi-gallery ul {
+.gPop-gallery ul {
   width: 100%;
   list-style-type: none;
   display: inline-block;
 }
-.gi-wrapper .gi-gallery ul li {
+.gPop-gallery ul li {
   float: left;
   margin-right: 1%;
   margin-bottom: 1em;
@@ -83,19 +94,18 @@ footer {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.gi-wrapper .gi-gallery ul li img {
+.gPop-gallery ul li img {
   width: 100%;
 }
-.gi-wrapper .gi-gallery ul li div {
+.gPop-gallery ul li div {
   display: none;
 }
-.gi-wrapper .gi-clonedImage {
+.gi-clonedImage {
 box-shadow: 1px 1px 10px 5px rgba(115,115,115,0.06);
 -webkit-box-shadow: 1px 1px 10px 5px rgba(115,115,115,0.06);
 -moz-box-shadow: 1px 1px 10px 5px rgba(115,115,115,0.06);
-
 }
-.gi-wrapper .gi-clonedImage {
+.gi-clonedImage {
   float: left;
   position: absolute;
   z-index: 1;
@@ -104,9 +114,42 @@ box-shadow: 1px 1px 10px 5px rgba(115,115,115,0.06);
   padding: 0.3%;
   cursor: pointer;
 }
-.gi-wrapper .gi-clonedImageInvisible {
+.gi-clonedImageInvisible {
   display: none;
 }
-.gi-wrapper .gi-clonedImageVisible {
+.gi-clonedImageVisible {
   display: block;
 }
+
+/* Media Queries Css
+––––––––––––––––––––––––––––––––––––––––––––––––*/
+
+@media (max-width: 480px) {
+
+.gPopDemoWapper {
+  margin: 0 20px;
+  max-width: 480px;
+  float: none;
+}
+
+#demo1 ul li {
+  width: 100%;
+}
+#demo2 ul li {
+  width: 100%;
+}
+#demo3 ul li {
+  width: 100%;
+}
+#demo4 ul li {
+  width: 100%;
+}
+#demo5 ul li {
+  width: 100%;
+}
+#demo6 ul li {
+  width: 100%;
+}
+}
+
+

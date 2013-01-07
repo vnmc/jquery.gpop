@@ -8,7 +8,7 @@
     $.fn.gpop = function(myOptions){
         var options = $.extend(
             {
-                scale:              1.3,
+                scale:              1.03,
                 resizeTimeout:      500,
                 limitedToWrapper:   true,
                 centered: true,
