@@ -1,4 +1,4 @@
-jQuery.gpop
+jquery.gpop
 =========
 <br>
 jQuery gPop is a simple image gallery
@@ -17,7 +17,7 @@ Demo
 Version
 -
 
-1.0
+0.2
 
 
 License
@@ -25,7 +25,7 @@ License
 
 MIT
 
-© 2012 Vanamco GmbH
+© 2012-2013 Vanamco GmbH
 
   
 [Live Demo]: http://vanamco.com/jquery.gpop/demo.html

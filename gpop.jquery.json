@@ -1,0 +1,28 @@
+{
+    "name": "gpop",
+    "title": "jQuery Gallery Pop",
+    "description": "jQuery plugin for image galleries with pop up effect.",
+    "keywords": [
+        "gallery",
+        "popup",
+        "images"
+    ],
+    "version": "0.2",
+    "author": {
+        "name": "Vanamco GmbH",
+        "url": "http://www.vanamco.com/humans.txt"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/vnmc/jquery.gpop/LICENSE"
+        }
+    ],
+    "bugs": "https://github.com/jquery/jquery-color/issues",
+    "homepage": "http://www.vanamco.com/jquery.gpop/demo.html",
+    "docs": "https://github.com/vnmc/jquery.gpop/README.md",
+    "download": "http://code.jquery.com/#color",
+    "dependencies": {
+        "jquery": ">=1.7"
+    }
+}

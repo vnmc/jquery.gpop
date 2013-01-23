@@ -1,5 +1,5 @@
 //	=================================================================
-//	jquery.imagegallery
+//	jquery.gpop - v0.2
 //	(c) 2012-2013 Vanamco GmbH, http://www.vanamco.com
 //	jquery.imagegallery may be freely distributed under the MIT license
 //	=================================================================
@@ -45,12 +45,12 @@
                     
                     if ( $gpopRootShown != null ){
                         $gpopRootShown
-                            .removeClass('gi-clonedImageVisible')
-                            .addClass('gi-clonedImageInvisible');
+                            .removeClass('gpop-clonedImageVisible')
+                            .addClass('gpop-clonedImageInvisible');
                     }
                     $root
-                            .removeClass('gi-clonedImageInvisible')
-                            .addClass('gi-clonedImageVisible');
+                            .removeClass('gpop-clonedImageInvisible')
+                            .addClass('gpop-clonedImageVisible');
                     $gpopRootShown = $root;
 
                     
@@ -67,11 +67,11 @@
 
         
         function create(){
-            $root = $('<div id="gi-rootContainer"></div>');
+            $root = $('<div id="gpop-rootContainer"></div>');
             $link = $('<a/>').appendTo($root);
             $clone = $('<img/>').appendTo($link);
             $text = $('<div/>').appendTo($root);
-            $root.addClass('gi-clonedImageInvisible').addClass('gi-clonedImage').prependTo($wrapper);
+            $root.addClass('gpop-clonedImageInvisible').addClass('gpop-clonedImage').prependTo($wrapper);
         }
         
         function init(){
@@ -90,7 +90,7 @@
             });
             
             $root.on('mouseleave.gpop', function(event){
-                $root.removeClass('gi-clonedImageVisible').addClass('gi-clonedImageInvisible');
+                $root.removeClass('gpop-clonedImageVisible').addClass('gpop-clonedImageInvisible');
                 $gpopRootShown = null;
             }); 
                         

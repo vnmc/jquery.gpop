@@ -100,12 +100,12 @@ footer {
 .gPop-gallery ul li div {
   display: none;
 }
-.gi-clonedImage {
+.gpop-clonedImage {
 box-shadow: 1px 1px 10px 5px rgba(115,115,115,0.06);
 -webkit-box-shadow: 1px 1px 10px 5px rgba(115,115,115,0.06);
 -moz-box-shadow: 1px 1px 10px 5px rgba(115,115,115,0.06);
 }
-.gi-clonedImage {
+.gpop-clonedImage {
   float: left;
   position: absolute;
   z-index: 1;
@@ -114,10 +114,10 @@ box-shadow: 1px 1px 10px 5px rgba(115,115,115,0.06);
   padding: 0.3%;
   cursor: pointer;
 }
-.gi-clonedImageInvisible {
+.gpop-clonedImageInvisible {
   display: none;
 }
-.gi-clonedImageVisible {
+.gpop-clonedImageVisible {
   display: block;
 }
 
