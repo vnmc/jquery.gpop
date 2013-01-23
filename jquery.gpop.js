@@ -5,6 +5,9 @@
 //	=================================================================
 
 (function($){
+
+    var $gpopRootShown = null;
+    
     $.fn.gpop = function(myOptions){
         var options = $.extend(
             {
@@ -22,10 +25,8 @@
 
                 },
                 showHover: function($image){
-                	// render the popup
+					// render the popup
                 	$root
-                        .removeClass('gi-clonedImageInvisible')
-                        .addClass('gi-clonedImageVisible')
                 		.find('img').attr('src', $image.attr('src'))
                         .css('max-width', $image.data('w1'))
                         .css('width', $image.data('w1'))
@@ -41,8 +42,20 @@
                     $root
                         .css('left', offs.left)
                         .css('top', offs.top);
+                    
+                    if ( $gpopRootShown != null ){
+                        $gpopRootShown
+                            .removeClass('gi-clonedImageVisible')
+                            .addClass('gi-clonedImageInvisible');
+                    }
+                    $root
+                            .removeClass('gi-clonedImageInvisible')
+                            .addClass('gi-clonedImageVisible');
+                    $gpopRootShown = $root;
+
+                    
                 },
-                delay: 0
+                delay: 50
             }, 
             myOptions);
     
@@ -50,10 +63,11 @@
         var $wrapper = this, $clone = null, $root = null, $text = null, $link = null;
         var resizeTimer = null;
         var delayTimer = null;
+        var myMouseX = 0, myMouseY = 0;
 
         
         function create(){
-            $root = $('<div></div>');
+            $root = $('<div id="gi-rootContainer"></div>');
             $link = $('<a/>').appendTo($root);
             $clone = $('<img/>').appendTo($link);
             $text = $('<div/>').appendTo($root);
@@ -77,16 +91,19 @@
             
             $root.on('mouseleave.gpop', function(event){
                 $root.removeClass('gi-clonedImageVisible').addClass('gi-clonedImageInvisible');
+                $gpopRootShown = null;
             }); 
                         
             $wrapper.on('mouseenter.gpop', 'ul li a img', function(event){
                 if(delayTimer != null){
                     window.clearTimeout(delayTimer);
                 }
+                
                 delayTimer = window.setTimeout(function(){
                     var $img = $(event.currentTarget);
                     options.showHover($img);
                 }, options.delay);
+
             });
             
             $(window).on('resize.gpop', function(event){
