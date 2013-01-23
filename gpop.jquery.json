@@ -21,7 +21,7 @@
     "bugs": "https://github.com/jquery/jquery-color/issues",
     "homepage": "http://www.vanamco.com/jquery.gpop/demo.html",
     "docs": "https://github.com/vnmc/jquery.gpop/README.md",
-    "download": "http://code.jquery.com/#color",
+    "download": "https://github.com/vnmc/jquery.gpop/",
     "dependencies": {
         "jquery": ">=1.7"
     }
