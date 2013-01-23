@@ -1,5 +1,5 @@
 //	=================================================================
-//	jquery.gpop - v0.2
+//	jquery.gpop - v0.2.0
 //	(c) 2012-2013 Vanamco GmbH, http://www.vanamco.com
 //	jquery.imagegallery may be freely distributed under the MIT license
 //	=================================================================
