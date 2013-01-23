@@ -20,7 +20,7 @@
     ],
     "bugs": "https://github.com/vnmc/jquery.gpop/issues",
     "homepage": "http://www.vanamco.com/jquery.gpop/demo.html",
-    "docs": "https://github.com/vnmc/jquery.gpop/blob/master/README.md",
+    "docs": "https://github.com/vnmc/jquery.gpop#jquerygpop",
     "download": "https://github.com/vnmc/jquery.gpop/",
     "dependencies": {
         "jquery": ">=1.7"
